@@ -1,12 +1,14 @@
-﻿using System.Collections;
+﻿using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
-public class Character : MonoBehaviour
+public class Character : MonoBehaviour, ISaveable
 {
-    public int curHp;
-    public int maxHp;
+    public float curHp;
+    public float maxHp;
 
     public float invulnerableDuration; //无敌时间
     public float invulnerableCounter;  //计时器
@@ -22,7 +24,25 @@ public class Character : MonoBehaviour
     public float currentPower;
     public float powerRecoverSpeed; //能量回复速度
 
-    private void Start()
+    public VoidEvent_SO newGameEvent;
+
+    private void OnEnable()
+    {
+        newGameEvent.OnEventRaised += NewGame;
+
+        ISaveable saveable = this;
+        saveable.RegisterSaveData();
+    }
+    private void OnDisable()
+    {
+        newGameEvent.OnEventRaised -= NewGame;
+
+        ISaveable saveable = this;
+        saveable.UnRegisterSaveData();
+    }
+
+
+    private void NewGame()
     {
         curHp = maxHp;
         OnHealthChange?.Invoke(this);
@@ -42,6 +62,19 @@ public class Character : MonoBehaviour
         if (currentPower < maxPower)
         {
             currentPower += powerRecoverSpeed*Time.deltaTime;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Water"))
+        {
+            if(curHp > 0)
+            {
+                curHp = 0;
+                OnHealthChange?.Invoke(this);
+                OnDead?.Invoke();
+            }
         }
     }
 
@@ -88,5 +121,40 @@ public class Character : MonoBehaviour
     {
         currentPower -= cost;
         OnHealthChange?.Invoke(this);
+    }
+
+    public DataDefination GetDataID()
+    {
+        return GetComponent<DataDefination>();  
+    }
+
+    public void GetSaveData(Data data)
+    {
+        if (data.characterPosDic.ContainsKey(GetDataID().id))
+        {
+            data.characterPosDic[GetDataID().id] = new SerializeVector3( transform.position);
+            data.floatSaveData[GetDataID().id + "curHp"] = this.curHp;
+            data.floatSaveData[GetDataID().id + "currentPower"] = this.currentPower;
+        }
+        else
+        {
+            data.characterPosDic.Add(GetDataID().id, new SerializeVector3(transform.position));
+            data.floatSaveData.Add(GetDataID().id+ "curHp", this.curHp); 
+            data.floatSaveData.Add(GetDataID().id+ "currentPower", this.currentPower); 
+        }
+    }
+
+    public void LoadData(Data data)
+    {
+        if (data.characterPosDic.ContainsKey(GetDataID().id))
+        {
+            transform.position = data.characterPosDic[GetDataID().id].ToVector3() ;
+
+            this.curHp = data.floatSaveData[GetDataID().id + "curHp"];
+            this.currentPower = data.floatSaveData[GetDataID().id + "currentPower"];
+
+            OnHealthChange?.Invoke(this);
+        }
+
     }
 }

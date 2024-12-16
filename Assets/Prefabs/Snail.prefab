@@ -24,7 +24,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5670497102851075910
 Transform:
   m_ObjectHideFlags: 0
@@ -231,6 +231,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: a11ae85ef6e5a7f4a986b95b06f8ff01, type: 2}
+        m_TargetAssemblyTypeName: VoidEvent_SO, Assembly-CSharp
+        m_MethodName: RaiseEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDead:
     m_PersistentCalls:
       m_Calls:
@@ -246,6 +258,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: a11ae85ef6e5a7f4a986b95b06f8ff01, type: 2}
+        m_TargetAssemblyTypeName: VoidEvent_SO, Assembly-CSharp
+        m_MethodName: RaiseEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnHealthChange:
+    m_PersistentCalls:
+      m_Calls: []
+  maxPower: 0
+  currentPower: 0
+  powerRecoverSpeed: 0
+  newGameEvent: {fileID: 11400000, guid: 2bb6f4a1e8603b64c93adcf609a1cb5a, type: 2}
 --- !u!114 &7482166054137724498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,6 +339,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   manual: 1
+  isOnWall: 0
+  isPlayer: 0
+  playerController: {fileID: 0}
+  rb: {fileID: 0}
 --- !u!114 &3505966239291499538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,6 +360,7 @@ MonoBehaviour:
   currentSpeed: 0
   faceDir: {x: 0, y: 0, z: 0}
   animator: {fileID: 0}
+  rb: {fileID: 0}
   physicsCheck: {fileID: 0}
   waitTime: 2
   waitTimeCounter: 0
@@ -341,3 +377,4 @@ MonoBehaviour:
     m_Bits: 128
   lostTime: 4
   lostTimeCounter: 0
+  spawnPoint: {x: 0, y: 0, z: 0}

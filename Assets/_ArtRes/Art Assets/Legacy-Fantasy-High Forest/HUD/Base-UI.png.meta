@@ -139,7 +139,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Base-UI_2
+      name: touch1
       rect:
         serializedVersion: 2
         x: 374
@@ -307,7 +307,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Base-UI_10
+      name: touch3
       rect:
         serializedVersion: 2
         x: 140
@@ -370,7 +370,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Base-UI_13
+      name: touch2
       rect:
         serializedVersion: 2
         x: 396
@@ -664,7 +664,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Base-UI_27
+      name: touch4
       rect:
         serializedVersion: 2
         x: 140
@@ -1063,7 +1063,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Base-UI_46
+      name: touch5
       rect:
         serializedVersion: 2
         x: 140
@@ -1735,7 +1735,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Base-UI_78
+      name: touch6
       rect:
         serializedVersion: 2
         x: 140
@@ -2121,7 +2121,7 @@ TextureImporter:
         width: 16
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2142,7 +2142,7 @@ TextureImporter:
         width: 64
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2163,7 +2163,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2184,7 +2184,7 @@ TextureImporter:
         width: 48
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2205,7 +2205,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2226,7 +2226,7 @@ TextureImporter:
         width: 16
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2251,19 +2251,16 @@ TextureImporter:
     nameFileIdTable:
       Base-UI_0: 1091573685
       Base-UI_1: -1243207432
-      Base-UI_10: -34974348
       Base-UI_100: 1466454026
       Base-UI_101: -482037495
       Base-UI_11: -524845324
       Base-UI_12: -1065101317
-      Base-UI_13: -822606458
       Base-UI_14: -1435451505
       Base-UI_15: 2000882094
       Base-UI_16: 1422946158
       Base-UI_17: -710196719
       Base-UI_18: 908755069
       Base-UI_19: -534023064
-      Base-UI_2: 1886909384
       Base-UI_20: -1114511677
       Base-UI_21: -2064069956
       Base-UI_22: -1293475456
@@ -2271,7 +2268,6 @@ TextureImporter:
       Base-UI_24: -780833013
       Base-UI_25: 1334713731
       Base-UI_26: 1625369584
-      Base-UI_27: -826162951
       Base-UI_28: -820895160
       Base-UI_29: -1847018574
       Base-UI_3: -158618541
@@ -2292,7 +2288,6 @@ TextureImporter:
       Base-UI_43: -1645112827
       Base-UI_44: 693411764
       Base-UI_45: 291964940
-      Base-UI_46: 541460752
       Base-UI_47: -347829773
       Base-UI_48: -425580988
       Base-UI_49: 1245945239
@@ -2327,7 +2322,6 @@ TextureImporter:
       Base-UI_75: -1145464797
       Base-UI_76: -1409265104
       Base-UI_77: 490245932
-      Base-UI_78: -194093613
       Base-UI_79: -129343909
       Base-UI_8: 515265303
       Base-UI_80: -711088431
@@ -2351,6 +2345,12 @@ TextureImporter:
       Base-UI_97: 834624530
       Base-UI_98: 353117457
       Base-UI_99: -776752663
+      touch1: 1886909384
+      touch2: -822606458
+      touch3: -34974348
+      touch4: -826162951
+      touch5: 541460752
+      touch6: -194093613
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

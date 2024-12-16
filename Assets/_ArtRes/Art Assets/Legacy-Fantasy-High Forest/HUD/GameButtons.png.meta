@@ -223,7 +223,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GameButtons_6
+      name: E9
       rect:
         serializedVersion: 2
         x: 161
@@ -244,7 +244,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GameButtons_7
+      name: E10
       rect:
         serializedVersion: 2
         x: 177
@@ -265,7 +265,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GameButtons_8
+      name: E11
       rect:
         serializedVersion: 2
         x: 193
@@ -286,7 +286,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GameButtons_9
+      name: E12
       rect:
         serializedVersion: 2
         x: 209
@@ -328,7 +328,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GameButtons_11
+      name: E6
       rect:
         serializedVersion: 2
         x: 65
@@ -349,7 +349,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GameButtons_12
+      name: E7
       rect:
         serializedVersion: 2
         x: 81
@@ -370,7 +370,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GameButtons_13
+      name: E8
       rect:
         serializedVersion: 2
         x: 97
@@ -916,7 +916,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GameButtons_39
+      name: E1
       rect:
         serializedVersion: 2
         x: 160
@@ -1210,7 +1210,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GameButtons_53
+      name: E5
       rect:
         serializedVersion: 2
         x: 49
@@ -1218,7 +1218,7 @@ TextureImporter:
         width: 14
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1239,7 +1239,7 @@ TextureImporter:
         width: 14
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1260,7 +1260,7 @@ TextureImporter:
         width: 14
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1281,7 +1281,7 @@ TextureImporter:
         width: 14
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1302,7 +1302,7 @@ TextureImporter:
         width: 14
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1323,7 +1323,7 @@ TextureImporter:
         width: 14
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1336,7 +1336,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GameButtons_59
+      name: E2
       rect:
         serializedVersion: 2
         x: 176
@@ -1344,7 +1344,7 @@ TextureImporter:
         width: 16
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1357,7 +1357,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GameButtons_60
+      name: E3
       rect:
         serializedVersion: 2
         x: 192
@@ -1365,7 +1365,7 @@ TextureImporter:
         width: 16
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1378,7 +1378,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GameButtons_61
+      name: E4
       rect:
         serializedVersion: 2
         x: 208
@@ -1386,7 +1386,7 @@ TextureImporter:
         width: 16
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1407,7 +1407,7 @@ TextureImporter:
         width: 16
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1428,7 +1428,7 @@ TextureImporter:
         width: 16
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1449,7 +1449,7 @@ TextureImporter:
         width: 16
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1470,7 +1470,7 @@ TextureImporter:
         width: 14
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1491,7 +1491,7 @@ TextureImporter:
         width: 14
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1512,7 +1512,7 @@ TextureImporter:
         width: 14
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1535,12 +1535,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      E1: 316003884
+      E10: -1586596219
+      E11: -1070902082
+      E12: 1301291934
+      E2: -1217916208
+      E3: -1688348807
+      E4: -2103120488
+      E5: -2140348373
+      E6: -1832370206
+      E7: -1827322069
+      E8: -1331944944
+      E9: -2074648520
       GameButtons_0: 268579719
       GameButtons_1: -1781273150
       GameButtons_10: 366176915
-      GameButtons_11: -1832370206
-      GameButtons_12: -1827322069
-      GameButtons_13: -1331944944
       GameButtons_14: 1077575438
       GameButtons_15: -595913854
       GameButtons_16: 1008034351
@@ -1568,7 +1577,6 @@ TextureImporter:
       GameButtons_36: 7322550
       GameButtons_37: -853859745
       GameButtons_38: -1412084644
-      GameButtons_39: 316003884
       GameButtons_4: -1528310011
       GameButtons_40: 953307207
       GameButtons_41: -38919630
@@ -1584,25 +1592,17 @@ TextureImporter:
       GameButtons_50: 2130693893
       GameButtons_51: 148606120
       GameButtons_52: -1933111463
-      GameButtons_53: -2140348373
       GameButtons_54: -2058535918
       GameButtons_55: -1853624197
       GameButtons_56: -2111308175
       GameButtons_57: -474802692
       GameButtons_58: 1208942565
-      GameButtons_59: -1217916208
-      GameButtons_6: -2074648520
-      GameButtons_60: -1688348807
-      GameButtons_61: -2103120488
       GameButtons_62: -1796743124
       GameButtons_63: -531878180
       GameButtons_64: 94617035
       GameButtons_65: 1227280321
       GameButtons_66: -597128797
       GameButtons_67: -486325010
-      GameButtons_7: -1586596219
-      GameButtons_8: -1070902082
-      GameButtons_9: 1301291934
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

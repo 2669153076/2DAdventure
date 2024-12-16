@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -49,6 +50,12 @@ public class PlayerController : MonoBehaviour
 
     private Character character;
 
+    public SceneLoadEvent_SO sceneLoadEvent;    
+    public VoidEvent_SO afterSceneLoadEvent;
+    public VoidEvent_SO loadDataEvent;
+
+    public VoidEvent_SO backToMenuEvent;
+
     private void Awake()
     {
         playerInputControl = new PlayerInputControl();
@@ -71,8 +78,9 @@ public class PlayerController : MonoBehaviour
         playerInputControl.GamePlay.Slide.started += Slide;
 
         character = GetComponent<Character>();
-    }
 
+        playerInputControl.Enable();
+    }
 
     private void PlayerAttack(InputAction.CallbackContext context)
     {
@@ -86,12 +94,20 @@ public class PlayerController : MonoBehaviour
 
     private void OnEnable()
     {
-        playerInputControl.Enable();
+        sceneLoadEvent.LoadRequestEvent += OnLoadRequestEvent;
+        afterSceneLoadEvent.OnEventRaised += OnAfterSceneLoadEvent;
+        loadDataEvent.OnEventRaised += OnLoadDataEvent;
+        backToMenuEvent.OnEventRaised += OnLoadDataEvent;
+
     }
 
     private void OnDisable()
     {
         playerInputControl.Disable();
+        sceneLoadEvent.LoadRequestEvent -= OnLoadRequestEvent;
+        afterSceneLoadEvent.OnEventRaised -= OnAfterSceneLoadEvent;
+        loadDataEvent.OnEventRaised -= OnLoadDataEvent;
+        backToMenuEvent.OnEventRaised -= OnLoadDataEvent;
     }
 
     private void Update()
@@ -240,4 +256,27 @@ public class PlayerController : MonoBehaviour
         isSlide = false;
         gameObject.layer = LayerMask.NameToLayer("Player");
     }
+
+
+
+    /// <summary>
+    /// 场景加载过程中不允许输入
+    /// </summary>
+    /// <param name="arg0"></param>
+    /// <param name="arg1"></param>
+    /// <param name="arg2"></param>
+    private void OnLoadRequestEvent(GameScene_SO arg0, Vector3 arg1, bool arg2)
+    {
+        
+        playerInputControl.GamePlay.Disable();
+    }
+    private void OnAfterSceneLoadEvent()
+    {
+        playerInputControl.GamePlay.Enable();
+    }
+    private void OnLoadDataEvent()
+    {
+        isDead = false;
+    }
+
 }

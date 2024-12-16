@@ -10,6 +10,7 @@ public class CameraController : MonoBehaviour
     public CinemachineImpulseSource cinemachineImpulse;
 
     public VoidEvent_SO cameraShakeEvent;
+    public VoidEvent_SO afterSceneLoadEvent;
 
     private void Awake()
     {
@@ -19,17 +20,20 @@ public class CameraController : MonoBehaviour
     private void OnEnable()
     {
         cameraShakeEvent.OnEventRaised += OnCameraShakeEvent;
+        afterSceneLoadEvent.OnEventRaised += OnAfterSceneLoadEvent;
     }
     private void OnDisable()
     {
 
         cameraShakeEvent.OnEventRaised -= OnCameraShakeEvent;
+        afterSceneLoadEvent.OnEventRaised -= OnAfterSceneLoadEvent;
     }
 
-    private void Start()
-    {
-        GetNewCameraBounds();
-    }
+
+    //private void Start()
+    //{
+    //    GetNewCameraBounds();
+    //}
 
     void GetNewCameraBounds()
     {
@@ -48,5 +52,9 @@ public class CameraController : MonoBehaviour
     private void OnCameraShakeEvent()
     {
         cinemachineImpulse.GenerateImpulse();
+    }
+    private void OnAfterSceneLoadEvent()
+    {
+        GetNewCameraBounds();
     }
 }

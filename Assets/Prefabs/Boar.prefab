@@ -78,9 +78,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1113584091
+  m_SortingLayer: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1811204361, guid: 1d73e5bf409185c45bfe71c4220510d6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -214,6 +214,8 @@ MonoBehaviour:
   curHp: 0
   maxHp: 500
   invulnerableDuration: 1
+  invulnerableCounter: 0
+  isInvulnerable: 0
   OnTakeDamage:
     m_PersistentCalls:
       m_Calls:
@@ -221,6 +223,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
         m_MethodName: OnTakeDamage
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: a11ae85ef6e5a7f4a986b95b06f8ff01, type: 2}
+        m_TargetAssemblyTypeName: VoidEvent_SO, Assembly-CSharp
+        m_MethodName: RaiseEvent
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -244,6 +258,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: a11ae85ef6e5a7f4a986b95b06f8ff01, type: 2}
+        m_TargetAssemblyTypeName: VoidEvent_SO, Assembly-CSharp
+        m_MethodName: RaiseEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnHealthChange:
+    m_PersistentCalls:
+      m_Calls: []
+  maxPower: 0
+  currentPower: 0
+  powerRecoverSpeed: 0
+  newGameEvent: {fileID: 11400000, guid: 2bb6f4a1e8603b64c93adcf609a1cb5a, type: 2}
 --- !u!114 &4606848913242092246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,6 +309,7 @@ MonoBehaviour:
   currentSpeed: 0
   faceDir: {x: 0, y: 0, z: 0}
   animator: {fileID: 0}
+  rb: {fileID: 0}
   physicsCheck: {fileID: 0}
   waitTime: 0
   waitTimeCounter: 0
@@ -290,8 +324,9 @@ MonoBehaviour:
   atkCheckLayer:
     serializedVersion: 2
     m_Bits: 128
-  lostTime: 0
+  lostTime: 2
   lostTimeCounter: 0
+  spawnPoint: {x: 0, y: 0, z: 0}
 --- !u!95 &6593858013592353161
 Animator:
   serializedVersion: 5
@@ -326,10 +361,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkRaduis: 0.1
-  offsetPos: {x: -0.12, y: -1.01}
+  offsetPos: {x: -1.38, y: -1.01}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   isGround: 0
   touchLeftWall: 0
   touchRightWall: 0
@@ -339,3 +374,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   manual: 0
+  isOnWall: 0
+  isPlayer: 0
+  playerController: {fileID: 0}
+  rb: {fileID: 0}
